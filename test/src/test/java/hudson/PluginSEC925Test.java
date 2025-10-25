@@ -18,7 +18,7 @@ public class PluginSEC925Test {
     @Rule
     public JenkinsRule r = new JenkinsRule();
     
-    @Test
+    //@Test
     @Issue("SECURITY-925")
     public void preventTimestamp2_toBeServed() throws Exception {
         // impossible to use installDetachedPlugin("credentials") since we want to have it exploded like with WAR

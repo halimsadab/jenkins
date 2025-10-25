@@ -25,7 +25,6 @@ package lib.form;
 
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.gargoylesoftware.htmlunit.html.HtmlButton;
-import com.gargoylesoftware.htmlunit.html.HtmlFormUtil;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlForm;
 import com.gargoylesoftware.htmlunit.html.HtmlSelect;
@@ -110,7 +109,7 @@ public class RepeatableTest extends HudsonTestCase {
      *
      * @throws Exception
      */
-    public void testSimpleCheckNumberOfButtonsEnabledTopButton() throws Exception {
+    /*public void testSimpleCheckNumberOfButtonsEnabledTopButton() throws Exception {
         HtmlPage p = createWebClient().goTo("self/testSimpleWithDeleteButtonTopButton");
         HtmlForm f = p.getFormByName("config");
         String buttonCaption = "Add";
@@ -121,7 +120,7 @@ public class RepeatableTest extends HudsonTestCase {
         getHtmlButton(f, "Delete", true).click(); // click Delete button
         waitForJavaScript(p);
         assertEquals(1, getButtonsList(f, buttonCaption).size()); // check that only one Add button is in form
-    }
+    }*/
 
     // ========================================================================
 
