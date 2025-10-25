@@ -35,6 +35,8 @@ import hudson.security.ACLContext;
 import hudson.util.VersionNumber;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
+
+import jenkins.security.stapler.StaplerDispatchable;
 import jenkins.util.SystemProperties;
 import hudson.Util;
 import hudson.XmlFile;
@@ -319,6 +321,7 @@ public class UpdateCenter extends AbstractModelObject implements Saveable, OnMas
      *      can be empty but never null. Oldest entries first.
      */
     @Exported
+    @StaplerDispatchable
     public List<UpdateCenterJob> getJobs() {
         synchronized (jobs) {
             return new ArrayList<UpdateCenterJob>(jobs);
@@ -519,6 +522,7 @@ public class UpdateCenter extends AbstractModelObject implements Saveable, OnMas
      * @return
      *      can be empty but never null.
      */
+    @StaplerDispatchable // referenced by _api.jelly
     public PersistedList<UpdateSite> getSites() {
         return sites;
     }

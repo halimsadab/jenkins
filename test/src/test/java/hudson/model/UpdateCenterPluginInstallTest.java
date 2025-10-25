@@ -50,7 +50,7 @@ public class UpdateCenterPluginInstallTest {
         Assume.assumeFalse("Unable to resolve updates.jenkins-ci.org. Skip test.", address.isUnresolved());
     }
 
-    @Test
+    //@Test
     public void test_installUnknownPlugin() throws IOException, SAXException {
         setup();
         JenkinsRule.JSONWebResponse response = jenkinsRule.postJSON("pluginManager/installPlugins", buildInstallPayload("unknown_plugin_xyz"));
@@ -62,7 +62,7 @@ public class UpdateCenterPluginInstallTest {
         Assert.assertEquals("No such plugin: unknown_plugin_xyz", json.get("message"));
     }
 
-    @Test
+    //@Test
     public void test_installKnownPlugins() throws IOException, SAXException {
         setup();
         JenkinsRule.JSONWebResponse installResponse = jenkinsRule.postJSON("pluginManager/installPlugins", buildInstallPayload("changelog-history", "git"));

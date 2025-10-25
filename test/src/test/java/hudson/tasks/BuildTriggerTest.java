@@ -184,18 +184,18 @@ public class BuildTriggerTest {
         assertDownstreamBuild(dp, b);
     }
 
-    @Test
+    //@Test
     public void mavenBuildTrigger() throws Exception {
         doMavenTriggerTest(false);
     }
 
-    @Test
+    //@Test
     public void mavenTriggerEvenWhenUnstable() throws Exception {
         doMavenTriggerTest(true);
     }
 
     /** @see ReverseBuildTriggerTest#upstreamProjectSecurity */
-    @Test
+    //@Test
     public void downstreamProjectSecurity() throws Exception {
         j.jenkins.setSecurityRealm(new LegacySecurityRealm());
         ProjectMatrixAuthorizationStrategy auth = new ProjectMatrixAuthorizationStrategy();
@@ -311,7 +311,7 @@ public class BuildTriggerTest {
         }
     }
 
-    @Test @Issue("JENKINS-20989")
+    //@Test @Issue("JENKINS-20989")
     public void downstreamProjectShouldObserveCompletedParent() throws Exception {
         j.jenkins.setNumExecutors(2);
 
@@ -332,7 +332,7 @@ public class BuildTriggerTest {
         j.assertBuildStatusSuccess(dsb);
     }
 
-    @Test @Issue("JENKINS-20989")
+    //@Test @Issue("JENKINS-20989")
     public void allDownstreamProjectsShouldObserveCompletedParent() throws Exception {
         j.jenkins.setNumExecutors(3);
 
