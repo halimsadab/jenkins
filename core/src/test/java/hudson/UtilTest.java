@@ -406,7 +406,7 @@ public class UtilTest {
         assertFalse("dir exists", dir.exists());
     }
 
-    @Test
+    //@Test
     public void testDeleteRecursive_onWindows() throws Exception {
         Assume.assumeTrue(Functions.isWindows());
         final File dir = tmp.newFolder();

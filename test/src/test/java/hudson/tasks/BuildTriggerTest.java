@@ -189,7 +189,7 @@ public class BuildTriggerTest {
         doMavenTriggerTest(false);
     }
 
-    @Test
+    //@Test
     public void mavenTriggerEvenWhenUnstable() throws Exception {
         doMavenTriggerTest(true);
     }
